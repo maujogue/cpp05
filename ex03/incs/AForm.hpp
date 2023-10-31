@@ -6,7 +6,7 @@
 /*   By: maujogue <maujogue@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 12:46:25 by maujogue          #+#    #+#             */
-/*   Updated: 2023/10/31 16:12:28 by maujogue         ###   ########.fr       */
+/*   Updated: 2023/10/31 16:33:01 by maujogue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class AForm {
     public:
 		AForm();
 		AForm (const std::string name, int gradeToSign, int gradeToExecute);
-		~AForm();
+		virtual ~AForm();
 		AForm(const AForm & src);
 		AForm &operator=(const AForm & src);
 

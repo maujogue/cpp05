@@ -6,7 +6,7 @@
 /*   By: maujogue <maujogue@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 10:17:03 by maujogue          #+#    #+#             */
-/*   Updated: 2023/10/31 16:20:08 by maujogue         ###   ########.fr       */
+/*   Updated: 2023/10/31 16:32:15 by maujogue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int main (void) {
 		Bureaucrat soldier("soldier", 2);
 		soldier.signForm(*rrf);
 		soldier.executeForm(*rrf);
+		delete rrf;
 	}
 	catch (std::exception& e)
 	{
@@ -38,6 +39,7 @@ int main (void) {
 		Bureaucrat soldier("soldier", 2);
 		soldier.signForm(*rrf);
 		soldier.executeForm(*rrf);
+		delete rrf;
 	}
 	catch (std::exception& e)
 	{
