@@ -6,7 +6,7 @@
 /*   By: maujogue <maujogue@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 10:20:39 by maujogue          #+#    #+#             */
-/*   Updated: 2023/10/30 14:45:27 by maujogue         ###   ########.fr       */
+/*   Updated: 2023/10/31 16:13:27 by maujogue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,4 +89,19 @@ const std::string &Bureaucrat::getName( void ) const {
 
 unsigned int Bureaucrat::getGrade( void ) const {
 	return (this->_grade);
+}
+
+void	Bureaucrat::signForm(Form & form){
+	if (form.getSigned() == true)
+	{
+		std::cout << _name << " couldn't sign " << form.getName() << " because it is already signed!" << std::endl;
+		return ;
+	}
+	try {
+		form.beSigned(*this);
+		std::cout << _name << " signed " << form.getName() << std::endl;
+	}
+	catch (std::exception& e){
+		std::cout << _name << " couldn't sign " << form.getName() << " because " << e.what() << std::endl;
+	}	
 }

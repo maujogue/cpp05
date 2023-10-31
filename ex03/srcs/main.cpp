@@ -6,38 +6,38 @@
 /*   By: maujogue <maujogue@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 10:17:03 by maujogue          #+#    #+#             */
-/*   Updated: 2023/10/30 14:44:51 by maujogue         ###   ########.fr       */
+/*   Updated: 2023/10/31 16:20:08 by maujogue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incs/Bureaucrat.hpp"
+#include "../incs/ShrubberyCreationForm.hpp"
+#include "../incs/RobotomyRequestForm.hpp"
+#include "../incs/PresidentialPardonForm.hpp"
+#include "../incs/Intern.hpp"
 
 int main (void) {
-	try{
-		Bureaucrat Private;
-		Private.decrementGrade();
+	try {
+		Intern someRandomIntern;
+		AForm* rrf;
+		rrf = someRandomIntern.makeForm("RobotomyRequestForm", "Lab Rat");
+		Bureaucrat soldier("soldier", 2);
+		soldier.signForm(*rrf);
+		soldier.executeForm(*rrf);
 	}
-	catch (std::exception& e){
+	catch (std::exception& e)
+	{
 		std::cout << e.what() << std::endl;
 	}
-	std::cout << std::endl;
-	
-	try{
-		Bureaucrat Private;
-		Private.incrementGrade();
-		std::cout << Private;
-	}
-	catch (std::exception& e){
-		std::cout << e.what() << std::endl;
-	}
-	std::cout << std::endl;
 	
 	try {
-		Bureaucrat Sergeant("Sergeant", 2);
-		std:: cout << Sergeant;
-		Sergeant.incrementGrade();
-		Sergeant.incrementGrade();
-		std::cout << Sergeant;
+		std::cout << std::endl;
+		Intern someRandomIntern;
+		AForm* rrf;
+		rrf = someRandomIntern.makeForm("Wrong form", "nobody");
+		Bureaucrat soldier("soldier", 2);
+		soldier.signForm(*rrf);
+		soldier.executeForm(*rrf);
 	}
 	catch (std::exception& e)
 	{
