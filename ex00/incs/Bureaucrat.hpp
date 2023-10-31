@@ -6,7 +6,7 @@
 /*   By: maujogue <maujogue@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 10:17:29 by maujogue          #+#    #+#             */
-/*   Updated: 2023/10/30 11:09:34 by maujogue         ###   ########.fr       */
+/*   Updated: 2023/10/31 16:35:54 by maujogue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,10 @@ class Bureaucrat {
 		~Bureaucrat();
 
 		const std::string 	&getName() const;
-		unsigned int 	getGrade() const;
+		unsigned int 		getGrade() const;
 
-		void	incrementGrade();
-		void	decrementGrade();
+		void				incrementGrade();
+		void				decrementGrade();
 };
 
 std::ostream &operator<<(std::ostream &os, Bureaucrat const & src);
