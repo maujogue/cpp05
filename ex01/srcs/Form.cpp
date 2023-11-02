@@ -6,7 +6,7 @@
 /*   By: maujogue <maujogue@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 12:53:29 by maujogue          #+#    #+#             */
-/*   Updated: 2023/10/31 16:14:16 by maujogue         ###   ########.fr       */
+/*   Updated: 2023/11/02 14:06:44 by maujogue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ Form::Form ( void ) :  _name("Default"), _signedStatus(false), _gradeToSign(150)
 
 Form::Form (const std::string name, int gradeToSign, int gradeToExecute) :
     _name(name),
+    _signedStatus(false),
     _gradeToSign(gradeToSign),
     _gradeToExecute(gradeToExecute) 
 {

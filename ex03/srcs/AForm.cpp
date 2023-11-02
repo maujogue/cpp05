@@ -18,8 +18,9 @@ AForm::AForm ( void ) :  _name("Default"), _signedStatus(false), _gradeToSign(15
 
 AForm::AForm (const std::string name, int gradeToSign, int gradeToExecute) :
     _name(name),
+    _signedStatus(false),
     _gradeToSign(gradeToSign),
-    _gradeToExecute(gradeToExecute) 
+    _gradeToExecute(gradeToExecute)
 {
     if (_gradeToSign < 1 || _gradeToExecute < 1)
         throw GradeTooHighException();
